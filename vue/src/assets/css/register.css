@@ -1,0 +1,18 @@
+.register{
+    /*width: 600px;*/
+    /*margin: 0 auto;*/
+}
+.register .img{
+    width: 925px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.register img{
+    width: 925px;
+    margin: 0 auto;
+}
+.register .register_main{
+    width: 725px;
+    margin: 0 auto;
+    padding: 0 100px;
+}

@@ -1,0 +1,25 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+.dishManage{
+    padding: 10px;
+}
+.dishManage_title{
+    display: flex;
+}
+.dishManage_search{
+    width: 80%;
+    height: 50px;
+}
+.dishManage_search input{
+    margin-right: 20px;
+}
+.dishManage_table{
+    width: 100%;
+}
+.dishManage_addbtn{
+}
+.disabled .el-upload--picture-card{
+    display: none
+}
