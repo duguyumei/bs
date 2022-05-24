@@ -1,0 +1,22 @@
+<!--pages/addresslist/addresslist.wxml-->
+<view wx:if="{{list.length == 0}}">
+  <text>暂无数据,请添加地址信息</text>
+</view>
+<view class="addresslist" wx:for="{{list}}" wx:key="id"  wx:for-index="id">
+  <view class="address_message" bindtap="chooseaddress" data-address="{{item}}">
+    <view class="address_addressname">{{item.addressname}} {{item.message}}</view>
+    <view class="address_foot">
+      <view class="address_name">{{item.name}}</view>
+      <view class="address_sex">{{item.sex}}</view>
+      <view class="address_phone">{{item.phone}}</view>
+    </view>
+  </view>
+  <view class="address_btn">
+    <view bindtap="editaddress" data-address="{{item}}">编辑</view>
+    <view bindtap="deleteaddress" data-address="{{item}}">删除</view>
+  </view>
+</view>
+<view class="addAddress" bindtap="addaddress">
+  <!-- <image src="../../images/添加"></image> -->
+  新增收货地址
+</view>

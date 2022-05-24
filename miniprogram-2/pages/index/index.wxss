@@ -1,0 +1,212 @@
+.marchant{
+  margin-top: 10px;
+  padding: 10px;
+}
+.marchant_header{
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  /* background-color: aqua; */
+}
+.marchant_image{
+  height: 100rpx;
+  width: 100rpx;
+  margin-left: 250rpx;
+}
+.marchant_name{
+  /* background-color: antiquewhite; */
+  position:absolute;
+  word-break:break-all;
+  overflow: hidden;
+  margin-left: 20rpx;
+  width: 345rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.header .title{
+  /* background-color: aquamarine; */
+  display: inline-block;
+  /* margin-top: -20rpx; */
+  position:absolute;
+  left: 20rpx;
+}
+.quit_btn{
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+  margin-right: 10rpx;
+  font-weight: normal;
+}
+.address_icon{
+  margin-left: 20rpx;
+  display: inline-block;
+  height: 50rpx;
+  width: 50rpx;
+  position:absolute;
+  top: 25rpx;
+  left: 200rpx;
+  /* margin-top: 60rpx; */
+}
+.address_mess{
+  /* background-color: aqua; */
+  height: 100rpx;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 35rpx;
+  width: 420rpx;
+  margin-left: 290rpx;
+  word-break:break-all;
+  overflow: hidden;
+}
+.modals_cancel{
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.login_title{
+  text-align: center;
+  font-weight: bold;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.login_view{
+  width: 550rpx;
+  height: 450rpx;
+  position: absolute;
+  background-color: antiquewhite;
+  z-index: 101;
+  right: 100rpx;
+  top: 300rpx;
+}
+.input_view{
+  display: flex;
+  margin-top: 10rpx;
+  padding-left: 20rpx;
+  margin-bottom: 40rpx;
+}
+.input_view  input{
+  /* background-color: aqua; */
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.input_view text{
+  display: inline-block;
+  height: 70rpx;
+  line-height: 70rpx;
+  /* background-color: aqua; */
+  margin-right: 20rpx;
+}
+.login_view .button_view{
+  display: flex;
+}
+.button_view .login{
+  width: 300rpx;
+}
+.order_list{
+  width: 100%;
+}
+.order_view{
+  border-bottom: 1rpx solid gainsboro;
+  /* background-color: antiquewhite; */
+}
+.order_list .header{
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  padding-right: 10rpx;
+  /* width: 710rpx; */
+  /* background-color: aquamarine; */
+  display: flex;
+  position: relative;
+  border-bottom: 1rpx solid gainsboro;
+}
+/* .marchant_avatar{
+  height: 90rpx;
+  width: 90rpx;
+  margin-top: 5rpx;
+  /* background-color: antiquewhite;
+}
+/* .marchant_name{
+  margin-left: 10rpx;
+  font-weight: bold;
+  font-size: 40rpx;
+  margin-right: 10rpx;
+  word-break:break-all;
+  overflow: hidden;
+  /* background-color: gold;
+  display: inline-block;
+  width: 350rpx;
+} */
+.order_list .header .icon{
+  font-size: 40rpx;
+}
+.order_people{
+  /* background-color: antiquewhite; */
+  width: 350rpx;
+  word-break:break-all;
+  overflow: hidden;
+}
+.order_address{
+  position:absolute;
+  right: 15rpx;
+  /* background-color:aqua; */
+  text-align: right;
+  display: inline-block;
+  width: 300rpx;
+  word-break:break-all;
+  overflow: hidden;
+  /* background-color: antiquewhite; */
+  height: 100rpx;
+}
+.container{
+  padding: 0;
+  margin-top: 20rpx;
+  /* background-color: gray; */
+  padding-left: 140rpx;
+  position: relative;
+  margin-bottom: 30rpx;
+  /* height: 10rpx; */
+}
+.dish_name{
+  word-break:break-all;
+  overflow: hidden;
+  /* background-color: greenyellow; */
+  width: 550rpx;
+  display: inline-block;
+}
+.dish_num{
+  position: absolute;
+  right: 15rpx;
+}
+.sum_message{
+  width: 550rpx;
+  /* background-color: greenyellow; */
+  margin-top: 20rpx;
+  text-align: right;
+}
+.dish_money{
+  font-weight: bold;
+}
+.footer{
+  display: flex;
+  /* background-color: greenyellow; */
+  width: 400rpx;
+  /* position: absolute; */
+  margin-left: 300rpx;
+  padding-bottom: 40rpx;
+  margin-top: 50rpx;
+}
+.footer button{
+  height: 80rpx;
+  width: 200rpx;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  background-color: azure;
+}

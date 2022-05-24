@@ -8,7 +8,6 @@ from math import *
 import sys
 
 openid = sys.argv[1]
-# openid = "oxOsk6hcp97MXaAdCEWwkASoMrbw"
 
 # 连接mysql
 mysql = DoMysql();

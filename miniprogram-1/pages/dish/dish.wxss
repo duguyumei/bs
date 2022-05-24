@@ -1,0 +1,222 @@
+/* pages/dish/dish.wxss */
+.marchant{
+  width: 100%;
+}
+.marchant_container{
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  background-color: bisque;
+  display: flex;
+  height: 165rpx;
+  padding: 10px;
+}
+.marchant_container image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.marchant_text{
+  margin-left: 20rpx;
+  position: relative;
+}
+.marchant_text .marchant_name{
+  height: 60rpx;
+  line-height: 60rpx;
+  word-break:break-all;
+  overflow: hidden;
+  font-weight: bold;
+  width: 370rpx;
+  margin-bottom: 10rpx;
+}
+.marchant_love{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  width: 120rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 10rpx;
+}
+.marchant_text .marchant_score{
+  font-size: 26rpx;
+  margin-bottom: 14rpx;
+  color:darkslategrey;
+  /* background-color: aqua; */
+}
+.marchant_text .marchant_message{
+  font-size: 26rpx;
+  color:darkslategrey;
+  width: 500rpx;
+  word-break:break-all;
+  overflow: hidden;
+  height: 40rpx;
+  /* background-color: aqua; */
+}
+.dish_list{
+  width: 700rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  /* background-color: darkcyan; */
+  height: 880rpx;
+  /* padding: 10rpx; */
+}
+.dish_list ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
+}
+.dish_view{
+  margin-top: 3px;
+  /* background-color: darkgoldenrod; */
+  padding: 3px;
+  display: flex;
+  height: 260rpx;
+  position: relative;
+}
+.dish_img{
+  /* background-color: darkgray; */
+  height: 250rpx;
+  width: 250rpx;
+  margin: 5rpx;
+  margin-right: 20rpx;
+}
+.dish_name{
+  margin-top: 5rpx;
+  /* background-color: darkgreen; */
+  height: 70rpx;
+  font-weight: bold;
+  line-height: 70rpx;
+  font-size: 50rpx;
+  word-break:break-all;
+  overflow: hidden;
+}
+.dish_sales,
+.dish_praise{
+  margin-top: 5rpx;
+  color: darkslategrey;
+}
+.dish_money{
+  display: flex;
+  position: absolute;
+  bottom: 10rpx;
+  width: 420rpx;
+  /* background-color: darkgrey; */
+  height: 70rpx;
+  line-height: 70rpx;
+  color: red;
+  font-size: 40rpx;
+}
+.remove_img{
+  height: 65rpx;
+  width: 65rpx;
+  float: right;
+  position:absolute ;
+  right: 135rpx;
+  top: 5rpx;
+}
+.add_img{
+  height: 60rpx;
+  width: 60rpx;
+  float: right;
+  position:absolute ;
+  right: 5rpx;
+  top: 5rpx;
+}
+.oreder_num{
+  height: 55rpx;
+  line-height: 55rpx;
+  width: 60rpx;
+  text-align: center;
+  /* background-color: aqua; */
+  display: inline-block;
+  position: absolute;
+  right: 70rpx;
+  top: 8rpx;
+  color: black;
+}
+.order_view{
+  width: 680rpx;
+  background-color:cornsilk;
+  height: 90rpx;
+  display: flex;
+  border-radius: 30rpx;
+  padding: 5rpx;
+  position: fixed; 
+  bottom: 20rpx;
+  left: 35rpx;
+  z-index: 1000;
+}
+.order_view image{
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+  height: 80rpx;
+  width: 80rpx;
+}
+.order_view_main{
+  display: flex;
+}
+.order_view_money{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 10rpx;
+  font-size: 60rpx; 
+  width: 300rpx;
+  margin-top: 5rpx;
+  /* background-color: blue; */
+}
+.order_view_submit{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 10rpx;
+  font-size: 40rpx; 
+  float: right;
+  margin-top: 5rpx;
+  width: 250rpx;
+  text-align: center;
+  /* background-color: aqua; */
+  border-left: 1rpx gainsboro solid;
+}
+/*模态框*/
+.modals_cancel{
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+ 
+.dialog_body {
+  position: absolute;
+  z-index: 101;
+  bottom: 130rpx;
+  left: 0;
+  right: 0;
+  height: 680rpx;
+  background-color: #fff;
+}
+ 
+/*动画前初始位置*/
+.bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.dialog_body .dish_view{
+  height: 160rpx;
+  /* background-color: chocolate; */
+}
+.dialog_body .dish_img{
+  width: 150rpx;
+  height: 150rpx;
+}
+.dialog_body .dish_name{
+  height: 60rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  font-size: 40rpx;
+}
+.dialog_body .dish_money{
+  width: 540rpx;
+  /* background-color: chocolate; */
+}

@@ -1,0 +1,107 @@
+/* pages/order/order.wxss */
+.order_list{
+  width: 100%;
+}
+.order_view{
+  border-bottom: 1rpx solid gainsboro;
+}
+.header{
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  padding-right: 10rpx;
+  width: 710rpx;
+  /* background-color: aquamarine; */
+  display: flex;
+  position: relative;
+  border-bottom: 1rpx solid gainsboro;
+}
+.marchant_avatar{
+  height: 90rpx;
+  width: 90rpx;
+  margin-top: 5rpx;
+}
+.marchant_name{
+  margin-left: 10rpx;
+  font-weight: bold;
+  font-size: 40rpx;
+  margin-right: 10rpx;
+  word-break:break-all;
+  overflow: hidden;
+  /* background-color: gold; */
+  display: inline-block;
+  width: 350rpx;
+}
+.header .icon{
+  font-size: 40rpx;
+}
+.order_state{
+  position:absolute;
+  right: 15rpx;
+}
+.container{
+  margin-top: 20rpx;
+  /* background-color: gray; */
+  padding-left: 140rpx;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+.dish_name{
+  word-break:break-all;
+  overflow: hidden;
+  /* background-color: greenyellow; */
+  width: 550rpx;
+  display: inline-block;
+}
+.dish_num{
+  position: absolute;
+  right: 15rpx;
+}
+.sum_message{
+  width: 590rpx;
+  /* background-color: greenyellow; */
+  margin-top: 20rpx;
+  text-align: right;
+}
+.dish_money{
+  font-weight: bold;
+}
+.footer{
+  display: flex;
+  /* background-color: greenyellow; */
+  width: 440rpx;
+  /* position: absolute; */
+  margin-left: 300rpx;
+  padding-bottom: 40rpx;
+}
+.footer button{
+  height: 80rpx;
+  width: 200rpx;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+}
+.eval_btn{
+  background-color: bisque;
+}
+.order_image{
+  height: 100%;
+}
+.layer{
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+.image_view{
+  z-index: 101;
+  background-color: blue;
+  width: 600rpx;
+  height: 800rpx;
+  position: absolute;
+  top: 150rpx;
+  left: 75rpx;
+}

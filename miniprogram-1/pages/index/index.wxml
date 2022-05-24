@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="container">
+  <form bindsubmit="getMarchantBysearch">
+    <view class="search">
+    <image src="../../images/search.png"></image>
+    <input type="text" class="search_input" placeholder="请输入关键字" name="search" />
+    <button class="search_btn" plain="true" form-type="submit">搜索</button>
+    </view>
+  </form>
+  <view class="recommend_marchant">
+    <view class="header">
+      <text class="title">推荐商家</text>
+    </view>
+    <view>
+        <view class="marchant_view" data-name="{{recommendMarchant}}" bindtap="toDish">
+          <view>
+          <image src="{{recommendMarchant.url}}"  mode="aspectFill" class="marchant_url"></image>
+          </view>
+          <view class="marchant_text">
+            <view class="marchant_name">{{recommendMarchant.name}}</view>
+            <view class="marchant_mintext">
+              <view class="marchant_score" wx:if="{{recommendMarchant.score != '0.0'}}">评分:{{recommendMarchant.score}}星</view>
+              <view class="marchant_score" wx:else>暂无评分</view>
+              <view class="marchant_sales">月售:{{recommendMarchant.sales}}</view>
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+  <view class="marchant">
+    <view class="header">
+      <text class="title">附近商家</text>
+      <image src="../../images/地址.png"></image>
+      <text wx:if="{{addressname.length == 0}}" class="address_mess" bindtap="chooseaddress">请选择地址</text>
+      <text wx:if="{{!addressname.length == 0}}" bindtap="chooseaddress" class="address_mess">{{addressname}}</text>
+    </view>
+    <view class="marchant_item">
+    <view wx:for="{{marchant_arry}}" wx:key="id"  wx:for-index="id">
+      <view class="marchant_view" data-name="{{item}}" bindtap="toDish">
+        <view>
+        <image src="{{item.url}}"  mode="aspectFill" class="marchant_url"></image>
+        </view>
+        <view class="marchant_text">
+          <view class="marchant_name">{{item.name}}</view>
+          <view class="marchant_mintext">
+            <view class="marchant_score" wx:if="{{item.score != '0.0'}}">评分:{{item.score}}星</view>
+            <view class="marchant_score" wx:else>暂无评分</view>
+            <view class="marchant_sales">月售:{{item.sales}}</view>
+            <view class="marchant_distance">距离:{{item.distance}}km</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    </view>
+    <view wx:if="{{marchant_arry.length == 0}}">
+      <view>
+        暂无数据
+      </view>
+    </view>
+  </view>
+</view>

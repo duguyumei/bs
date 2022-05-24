@@ -1,0 +1,61 @@
+<!--pages/dish/dish.wxml-->
+<view class="marchant">
+  <view class="marchant_container">
+    <view>
+      <image src="{{marchantInfo.url}}"  mode="aspectFill" class="marchant_url"></image>
+    </view>
+    <view class="marchant_text">
+      <view class="marchant_name">{{marchantInfo.name}}</view>
+      <button class="marchant_love" plain="true">收藏</button>
+      <view class="marchant_mintext">
+        <view class="marchant_score">评分:{{marchantInfo.score}}星</view>
+        <view class="marchant_message">{{marchantInfo.message}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y="true" class="dish_list">
+  <view class="dish_view" wx:for="{{dish_array}}" wx:key="id" wx:for-index="index">
+    <image src="{{item.url}}" class="dish_img"></image>
+    <view>
+      <view class="dish_name">{{item.name}}</view>
+      <view class="dish_sales">月售{{item.monthsales}}</view>
+      <view class="dish_praise">赞{{item.praise}}</view>
+      <view class="dish_money">
+        <view>¥ {{item.money}}</view>
+        <view>
+          <image src="../../images/减少.png" wx:if="{{!item.num == 0}}" class="remove_img" bindtap="removedish" data-index="{{index}}" ></image>
+          <text class="oreder_num" wx:if="{{!item.num == 0}}">{{item.num}}</text>
+          <image src="../../images/添加.png" class="add_img" bindtap="adddish" data-index="{{index}}" ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="order_view">
+  <view class="order_view_main"  bindtap="clickfoot">
+    <image src="../../images/购物车.png"></image>
+    <view class="order_view_money">¥ {{money}}</view>
+  </view>
+  <view class="order_view_submit" bindtap="submitorder">去结算</view>
+</view>
+
+<view hidden="{{hideModal}}">
+  <view class="modals_cancel" bindtap="hideModal"></view>
+  <scroll-view scroll-y="true" class="dialog_body bottom-pos" animation="{{animationData}}">
+    <view class="dish_view" wx:for="{{dish_array}}" wx:key="id" wx:for-index="index" wx:if="{{item.num > 0}}">
+    <image src="{{item.url}}" class="dish_img"></image>
+    <view>
+      <view class="dish_name">{{item.name}}</view>
+      <view class="dish_money">
+        <view>¥ {{item.money}}</view>
+        <view>
+          <image src="../../images/减少.png" class="remove_img" bindtap="removedish" data-index="{{index}}" ></image>
+          <text class="oreder_num" wx:if="{{!item.num == 0}}">{{item.num}}</text>
+          <image src="../../images/添加.png" class="add_img" bindtap="adddish" data-index="{{index}}" ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+</view>

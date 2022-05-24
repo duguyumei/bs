@@ -1,0 +1,180 @@
+/* pages/addorder/addorder.wxss */
+.header,
+.dish,
+.footer{
+  width: 700rpx;
+  margin: 25rpx;
+  background-color: lightcyan;
+}
+.address{
+  padding: 10rpx;
+  position: relative;
+  /* background-color: lightgray; */
+  width: 680rpx;
+  border-bottom: 1rpx solid gray;
+  padding-bottom: 20rpx;
+}
+.view_right{
+  position: absolute;
+  right: 5rpx;
+  top:60rpx;
+  font-size: 40rpx;
+  color: gray;
+}
+.address_name{
+  /* background-color: gray; */
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  overflow: hidden;
+  word-break:break-all;
+  width: 100%;
+}
+.address_user{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%;
+}
+.time{
+  position: relative;
+  width: 100%;
+}
+.now_time,
+.set_time{
+  padding-left: 10rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  width: 690rpx;
+  /* background-color: lightgreen; */
+}
+.time .view_right{
+  top: 18rpx;
+}
+.dish{
+  width: 680rpx;
+  padding: 0 10rpx;
+  /* background-color: lightyellow; */
+}
+.marchant_name{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid gray;
+}
+.dish_list{
+  width: 100%;
+  /* background-color: limegreen; */
+  /* display: flex; */
+}
+.dish_view{
+  margin-top: 20rpx;
+  display: flex;
+  position: relative;
+}
+.disn_url{
+  width: 150rpx;
+  height: 150rpx;
+}
+.dish_text{
+  margin-left: 20rpx;
+}
+.text_header{
+  font-size: 40rpx;
+}
+.dish_money{
+  float: right;
+  position: absolute;
+  right: 15rpx;
+}
+.dish_num{
+  position: absolute;
+  bottom: 5rpx;
+}
+.sum_money{
+  margin-top: 20rpx;
+  border-top: 1rpx solid gray;
+  height: 100rpx;
+  line-height: 100rpx;
+  /* background-color: limegreen; */
+  text-align: right;
+  padding-right: 20rpx;
+  /* float: right; */
+}
+.money_text{
+  font-weight: bold;
+  font-size: 50rpx;
+}
+.footer{
+  /* background-color: linen; */
+  padding: 10rpx;
+  width: 680rpx;
+  margin-bottom: 140rpx;
+}
+.order_way,
+.order_message,
+.order_invoice{
+  height: 90rpx;
+  line-height: 90rpx;
+  position: relative;
+}
+.order_way,
+.order_message{
+  border-bottom: 1rpx solid gray;
+}
+.order_message input{
+  height: 90rpx;
+  line-height: 90rpx;
+  display: inline-block;
+  /* background-color: magenta; */
+  position: absolute;
+  right: 5rpx;
+  width: 400rpx;
+}
+.text_value{
+  position: absolute;
+  right: 5rpx;
+}
+.order_invoice .text_value{
+  color: darkgray;
+}
+.order_view{
+  width: 680rpx;
+  background-color:cornsilk;
+  height: 90rpx;
+  display: flex;
+  border-radius: 30rpx;
+  padding: 5rpx;
+  position: fixed; 
+  bottom: 20rpx;
+  left: 35rpx;
+  z-index: 1000;
+}
+.order_view_main{
+  margin-left: 40rpx;
+  display: flex;
+  /* background-color: black; */
+  /* color: white; */
+}
+.order_view_money{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 10rpx;
+  font-size: 60rpx; 
+  width: 300rpx;
+  margin-top: 5rpx;
+  /* background-color: blue; */
+}
+.order_view_submit{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 60rpx;
+  font-size: 40rpx; 
+  float: right;
+  margin-top: 5rpx;
+  width: 250rpx;
+  text-align: center;
+  /* background-color: aqua; */
+  border-left: 1rpx gainsboro solid;
+}

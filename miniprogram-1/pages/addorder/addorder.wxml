@@ -1,0 +1,52 @@
+<!--pages/addorder/addorder.wxml-->
+<view class="header">
+  <view class="address" bindtap="chooseaddress">
+    <view class="address_name"><text wx:if="{{address.addressname == '' || address.addressname == null}}">点击选择地址</text>{{address.addressname}} {{address.message}}</view>
+    <view class="address_user">{{address.name}} {{address.sex}} {{address.phone}}</view>
+    <view class="view_right">></view>
+  </view>
+  <view class="time">
+    <view class="now_time" wx:if="{{!setTime}}">立即送出</view>
+    <view class="set_time" wx:else="">指定时间</view>
+    <view class="view_right">></view>
+  </view>
+</view>
+<view class="dish">
+  <view class="marchant_name">{{marchantInfo.name}}</view>
+  <view class="dish_list">
+    <view class="dish_view"  wx:for="{{dishlist}}" wx:key="id" wx:for-index="index">
+      <image class="disn_url" src="{{item.url}}"></image>
+      <view class="dish_text">
+        <view class="text_header">
+          <text class="dish_name">{{item.name}}</text>
+          <text class="dish_money">¥{{item.money}}</text>
+        </view>
+        <view class="dish_num">x{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="sum_money">
+    <view>小计 ¥<text class="money_text">{{summoney}}</text></view>
+  </view>
+</view>
+<view class="footer">
+  <view class="order_way">
+    <text>支付方式</text>
+    <text class="text_value">在线支付</text>
+  </view>
+  <view class="order_message">
+    <text>备注</text>
+    <input type="text" placeholder="推荐使用无接触配送" 	bindinput="changeInput" />
+  </view>
+  <view class="order_invoice">
+    <text>发票</text>
+    <text class="text_value">该店不支持线上发票,请电话联系商户</text>
+  </view>
+</view>
+
+<view class="order_view">
+  <view class="order_view_main">
+    <view class="order_view_money">¥ {{summoney}}</view>
+  </view>
+  <view class="order_view_submit" bindtap="payorder">去支付</view>
+</view>

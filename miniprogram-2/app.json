@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/user/user",
+    "pages/dish/dish"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "校园外卖",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "position": "bottom",
+    "backgroundColor": "#FFFFFF",
+    "color": "gray",
+    "selectedColor": "1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "正在派送",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home_1.png" 
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "历史订单",
+        "iconPath": "/images/order.png",
+        "selectedIconPath": "/images/order_1.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息用于选择所在地址"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

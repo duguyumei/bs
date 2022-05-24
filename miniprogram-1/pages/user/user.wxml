@@ -1,0 +1,32 @@
+<!--pages/user/user.wxml-->
+<view class="header">
+  <image src="{{userInfo.avatarUrl}}" class="user_avatar">
+  </image>
+  <view class="text">
+    <view class="user_nickname">{{userInfo.nickName}}</view>
+    <view class="user_phone">{{phone}}</view>
+  </view>
+</view>
+<view class="container">
+  <view class="container_li" bindtap="myAddress">
+    <image src="../../images/地址.png"></image>
+    我的地址
+    <view class="container_r">></view>
+  </view>
+  <view class="container_li" bindtap="myLove">
+    <image src="../../images/收藏.png"></image>
+    我的收藏
+    <view class="container_r">></view>
+  </view>
+  <view class="container_li" bindtap="myEvaluate">
+    <image src="../../images/评价.png"></image>
+    我的评价
+    <view class="container_r">></view>
+  </view>
+  <!-- <view class="container_li">
+      <image src="../../images/手机.png"></image>
+      修改手机号
+      <view class="container_r">></view>
+    </view> -->
+</view>
+<button class="quit_btn">退出账号</button>

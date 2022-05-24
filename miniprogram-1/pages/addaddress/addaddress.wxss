@@ -1,0 +1,43 @@
+/* pages/addaddress/addaddress.wxss */
+.form_line {
+  padding: 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  /* background-color: aqua; */
+  border-bottom: 1rpx solid gainsboro;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+.form_line .left{
+  width: 150rpx;
+  /* background-color: gold; */
+  display: inline-block;
+}
+.form_line .center{
+  /* background-color:green; */
+  width: 550rpx;
+  color: gray;
+  word-break:break-all;
+  overflow: hidden;
+}
+.form_line .center_have{
+  width: 550rpx;
+  word-break:break-all;
+  overflow: hidden;
+  /* color: gray; */
+}
+.form_line .right{
+  float: right;
+}
+.form_line input{
+  /* background-color: gold; */
+  height: 80rpx;
+}
+.form_radio{
+  font-size: 28rpx;
+  margin-right: 5rpx;
+}
+.form_line radio{
+  transform:scale(0.7);
+}

@@ -1,0 +1,44 @@
+<!--pages/showEvaluate/showEvaluate.wxml-->
+<!--服务评价-->
+<view class="service">
+  <!--评分-->
+  <view class='score'>
+    <view class='left'>
+      评分
+    </view>
+    <view class='right'>
+       <view data-index="{{index}}"  class="star" wx:for="{{userStars}}" wx:key="index">
+        <image src="{{item}}"></image>
+      </view>
+      <text class='rtxt'>{{wjxScore}}.0分</text>
+    </view>
+  </view>
+  <!--图片-->
+  <view class='picture' wx:if="{{pics.length>0}}">
+    <view class='left'>
+      图片
+    </view>
+    <view class='right'>
+       <view class="parcel" wx:for="{{pics}}" wx:key="{{index}}">
+        <image src="{{pics[index]}}" class="According" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+       </view>
+    </view>
+  </view>
+</view>
+<!--textarea-->
+<view class="conts" wx:if="{{message}}">
+    <view style="margin-left: 20rpx; margin-top: 20rpx;">
+      评价  
+    </view>
+    <textarea class="areas" value="{{message}}" minlength="{{min}}" maxlength="{{max}}" disabled="true">
+    </textarea>
+</view>
+<!--textarea-->
+<view class="conts" wx:if="{{marmessage}}">
+    <view style="margin-left: 20rpx; margin-top: 20rpx;">
+      商家回复  
+    </view>
+    <textarea class="areas" value="{{marmessage}}" minlength="{{min}}" maxlength="{{max}}" disabled="true">
+    </textarea>
+</view>
+

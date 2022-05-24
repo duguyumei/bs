@@ -1,0 +1,48 @@
+<view class="marchant">
+    <view class="marchant_header header">
+      <text class="title">正在配送</text>
+      <!-- <image src="{{marchant.url}}" class="marchant_image"></image>
+      <text class="marchant_name">{{marchant.name}}</text> -->
+      <button bindtap="quit" class="quit_btn">退出登录</button>
+    </view>
+    <view class="order_list" >
+    <view class="order_view" wx:for="{{orderlist}}" wx:key="id">
+      <view class="header">
+        <text class="order_people">{{item.people}}</text>
+        <text class="order_address" bindtap="showAddress" data-index="{{index}}">{{item.address}}</text>
+      </view>
+    <view class="container">
+      <view class="order_dish" wx:for="{{item.dish}}" wx:for-item="dishitem" wx:for-index="dishindex" wx:key="id">
+        <text class="dish_name">{{dishitem.name}}</text>
+        <text class="dish_num">x{{dishitem.num}}</text>
+      </view>
+      <view class="sum_message">
+        <text class="sum_dish">共计{{item.dish.length}}件商品,实付</text>
+        <text class="dish_money">¥{{item.money}}</text>
+      </view>
+    </view>
+    <view class="footer">
+      <button class="over_btn" data-index="{{index}}" bindtap="overOrder">完成订单</button>
+    </view>
+  </view>
+</view>
+  <view wx:if="{{orderlist.length == 0}}">
+    <view>暂无数据</view>
+  </view>
+</view>
+
+<view wx:if="{{login}}">
+<view class="modals_cancel"></view>
+<form action="" class="login_view"  bindsubmit="login">
+  <view class="login_title">骑手登录</view>
+  <view class="input_view">
+    <text>账号:</text><input type="text" name="username" />
+  </view>
+  <view class="input_view">
+    <text>密码:</text><input type="password" name="password" />
+  </view>
+  <view class="button_view">
+    <button class="login" form-type="submit">登录</button>
+  </view>
+</form>
+</view>

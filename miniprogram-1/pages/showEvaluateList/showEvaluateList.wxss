@@ -1,0 +1,83 @@
+/* pages/showEvaluateList/showEvaluateList.wxss */
+.sum{
+  margin-left: 15rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 40rpx;
+}
+.evaluate_list{
+  padding: 15rpx;
+  background-color: whitesmoke;
+}
+.eval_view{
+  padding: 20rpx;
+  background-color: white;
+  margin-bottom: 20rpx;
+}
+.header{
+  display: flex;
+}
+.marchant_img{
+  height: 120rpx;
+  width: 120rpx;
+  /* background-color: black; */
+  margin-right: 20rpx;
+}
+.marchant_name{
+  line-height: 70rpx;
+  height: 70rpx;
+  /* background-color: blue; */
+  width: 540rpx;
+}
+.marchant_name .name{
+  max-width: 320rpx;
+  /* background-color: chartreuse; */
+  height: 70rpx;
+  display: inline-block;
+  overflow: hidden;
+  word-break:break-all;
+}
+.marchant_name .icon{
+  /* background-color: coral; */
+  display: inline-block;
+  position:absolute;
+}
+.marchant_name .time{
+  float: right;
+  /* background-color:cornsilk; */
+  font-size: small;
+  color:gray;
+}
+.score{
+  /* background-color: chocolate; */
+  margin-top: 10rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.cust_eval,
+.mar_eval{
+  margin-left: 140rpx;
+}
+.cust_eval{
+  margin-top: 40rpx;
+  /* background-color: coral; */
+  word-break:break-all;
+  width: 540rpx;
+}
+.mar_eval{
+  margin-top: 30rpx;
+  width: 500rpx;
+  background-color: #eeeeee;
+  padding: 15rpx 20rpx;
+}
+.mar_eval .title{
+  /* background-color:yellow; */
+  color: gray;
+}
+.mar_eval .etime{
+  float: right;
+}
+.mar_mess{
+  margin-top: 15rpx;
+  word-break:break-all;
+}

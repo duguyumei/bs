@@ -1,0 +1,48 @@
+/* pages/addresslist/addresslist.wxss */
+.addresslist{
+  border-top: 1rpx solid gray;
+  /* height: 140rpx; */
+  padding: 20rpx;
+  display: flex;
+}
+.address_addressname{
+  /* background-color: darkgreen; */
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 40rpx;
+  width: 600rpx;
+  word-break:break-all;
+  overflow: hidden;
+}
+.address_foot{
+  margin-top: 10rpx;
+  display: flex;
+  color: darkgray;
+}
+.address_sex{
+  margin-left: 20rpx;
+}
+.address_phone{
+  margin-left: 20rpx;
+}
+.address_btn view{
+  margin-top: 5rpx;
+  height: 50rpx;
+  line-height: 40rpx;
+  width: 100rpx;
+  text-align: center;
+  /* background-color: darkkhaki; */
+}
+.address_edit{
+  margin-bottom: 15rpx;
+}
+.addAddress{
+  background-color: aqua;
+  width: 750rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 50rpx;
+  position: fixed; 
+  bottom: 15rpx;
+}

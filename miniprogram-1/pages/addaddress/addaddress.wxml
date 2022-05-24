@@ -1,0 +1,28 @@
+<!--pages/addaddress/addaddress.wxml-->
+<form action="" catchsubmit="formSubmit" class="form">
+<view class="form_line">
+  <text class="left">收货地址:</text>
+  <!-- <picker mode="region"> -->
+    <text bindtap="chooseaddress" class="{{(address == '')?'center':'center_have'}}">{{addressname}}</text>
+  <!-- </picker> -->
+  <text class="right">></text>
+</view>
+<view  class="form_line">
+  <text class="left">详细地址:</text>
+  <input type="text" name="message" placeholder="详细地址,例西门" bindinput="inputmessage" value="{{message}}" />
+</view>
+<view  class="form_line">
+  <text class="left">联系人:</text>
+  <input type="text" name="username" placeholder="请填写收货人的姓名" bindinput="inputname" value="{{name}}" />
+  <radio-group name="sex" bindchange="choosesex" class="form_radio">
+    <label><radio value="先生" checked="{{sex=='女士'?false:true}}"/>先生</label>
+    <label><radio value="女士"  checked="{{sex=='女士'?true:false}}"/>女士</label>
+  </radio-group>
+</view>
+<view  class="form_line">
+  <text class="left">手机号:</text>
+  <input type="text" name="phone" placeholder="请填写收货人手机号码" bindinput="inputphone" value="{{phone}}" />
+</view>
+
+<button formType="submit">保存地址</button>
+</form>

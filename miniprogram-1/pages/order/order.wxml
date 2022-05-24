@@ -1,0 +1,36 @@
+<!--pages/order/order.wxml-->
+<view wx:if="{{orderlist.length == 0}}">
+  暂无订单
+</view>
+<scroll-view scroll-y="true" style="height: 100vh;">
+<view class="order_list" >
+  <view class="order_view" wx:for="{{orderlist}}" wx:key="id">
+    <view class="header" bindtap="toDish" data-name="{{item.marchant}}">
+      <image src="{{item.marchant.url}}" class="marchant_avatar"></image>
+      <view class="marchant_name">{{item.marchant.name}} <text class="icon">></text></view>
+      <text class="order_state">{{item.state}}</text>
+    </view>
+    <view class="container">
+      <view class="order_dish" wx:for="{{item.dish}}" wx:for-item="dishitem" wx:for-index="dishindex" wx:key="id">
+        <text class="dish_name">{{dishitem.name}}</text>
+        <text class="dish_num">x{{dishitem.num}}</text>
+      </view>
+      <view class="sum_message">
+        <text class="sum_dish">共计{{item.dish.length}}件商品,实付</text>
+        <text class="dish_money">¥{{item.money}}</text>
+      </view>
+    </view>
+    <view class="footer">
+      <button wx:if="{{item.state == '已完成' && item.evaluate == '0'}}" bindtap="showImage" data-url="{{item.url}}">查看图片</button>
+      <button class="eval_btn" wx:if="{{item.evaluate >= '1'}}" bindtap="showEvaluate" data-order="{{item}}">查看评论</button>
+      <button class="eval_btn" wx:if="{{item.state == '已完成' && item.evaluate == '0'}}" bindtap="evaluate" data-order="{{item}}">去评论</button>
+      <button wx:elif="{{item.state == '等待商家接单' || item.state == '等待骑手派送' || item.state == '正在派送'}}" bindtap="linkMarchant" data-marchant="{{item.marchant}}">联系商家</button>
+      <!-- <button wx:elif="{{item.state == '正在派送'}}"  bindtap="linkRide" data-marchant="{{item.ride}}">联系骑手</button> -->
+    </view>
+  </view>
+</view>
+</scroll-view>
+<view catchtouchmove="ture" wx:if="{{showImage}}" class="order_image">
+  <view class="layer" bindtap="hiddenImage"></view>
+  <image src="{{imgSrc}}" class="image_view"></image>
+</view>

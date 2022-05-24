@@ -1,0 +1,25 @@
+<!--pages/showEvaluateList/showEvaluateList.wxml-->
+<view class="evaluate_list">
+  <view class="sum">已贡献{{evaluateList.length}}条评论</view>
+  <view wx:for="{{evaluateList}}" class="eval_view">
+    <view class="header">
+      <image class="marchant_img" src="{{item.marchant.url}}"></image>
+      <view>
+        <view class="marchant_name" data-name="{{item.marchant}}" bindtap="toDish">
+          <text class="name">{{item.marchant.name}}</text>
+          <text class="icon">></text>
+          <text class="time">{{item.stime}}</text>
+        </view>
+        <view class="score">评分:{{item.source}}星</view>
+      </view>
+    </view>
+    <view wx:if="{{item.message.length != 0}}" class="cust_eval">{{item.message}}</view>
+    <view wx:if="{{item.marmessage.length >= 0}}" class="mar_eval">
+      <view class="title">
+        商家回复
+        <text class="etime">{{item.etime}}</text>
+      </view>
+      <view class="mar_mess">{{item.marmessage}}</view>
+    </view>
+  </view>
+</view>

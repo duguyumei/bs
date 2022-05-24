@@ -28,8 +28,8 @@ public class UserController {
     @PostMapping("/getOpenid")
     public Result getOpenid(@RequestBody String code) throws IOException {
         JSONObject jsonObject =  JSONUtil.parseObj(code);
-        String appid = "wx9e61754d02557cc2";
-        String appSecret = "f877585505fb680220f935fdb2863759";
+        String appid = "wx9e61754d025257c2";
+        String appSecret = "f877585505fb680660f935fdb2863759";
         String url = "https://api.weixin.qq.com/sns/jscode2session?appid=" + appid + "&secret=" + appSecret + "&js_code=" + jsonObject.get("code") + "&grant_type=authorization_code";
         //客户端
         OkHttpClient client = new OkHttpClient();

@@ -1,0 +1,54 @@
+/* pages/user/user.wxss */
+.header{
+  /* height: 300rpx; */
+  background-color: lightblue;
+  display: flex;
+}
+.user_avatar{
+  height: 200rpx;
+  width: 200rpx;
+  margin: 20rpx;
+}
+.user_nickname{
+  margin-top: 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 70rpx;
+  font-weight: bold;
+}
+.user_phone{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 50rpx;
+  margin-top: 20rpx;
+}
+.container{
+  margin-top: 30rpx;
+  width:750rpx;
+  background-color: lightgoldenrodyellow;
+  border-top:  lightgray 1rpx solid;
+}
+.container_li{
+  padding: 25rpx;
+  border-bottom: lightgray 1rpx solid;
+  line-height: 50rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  position: relative;
+}
+.container_li image{
+  height: 40rpx;
+  width: 40rpx;
+  /* margin-top: 15rpx; */
+  margin-right: 28rpx;
+  /* position: absolute; */
+  /* top: 30rpx; */
+  float: left;
+  margin-top: 10rpx;
+}
+.container_r{
+  float: right;
+}
+.quit_btn{
+  margin-top: 30rpx;
+}
